@@ -4,7 +4,10 @@ interface IconProps extends Omit<ImageProps, "width" | "height"> {
   size?: number;
   alt: string;
 }
-
-export function Icon({ size = 100, ...props }: IconProps) {
-  return <Image width={size} height={size} {...props} alt={"icon"} />;
+export default function Icon({
+  size = 100,
+  alt = "icon",
+  ...props
+}: IconProps) {
+  return <Image width={size} height={size} alt={alt} {...props} />;
 }
