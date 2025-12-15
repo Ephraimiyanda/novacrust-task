@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { SelectFieldProps } from "../types";
-import { Icon } from "./icon";
+import Icon from "./icon";
 
 export const SelectField = ({
   label,

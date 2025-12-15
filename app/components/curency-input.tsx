@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Currency, CurrencyInputProps } from "../types";
-import { Icon } from "./icon";
+import Icon from "./icon";
 
 export const CurrencyInput = ({
   label,
