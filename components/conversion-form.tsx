@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useMemo } from "react";
 import { CRYPTOCURRENCIES, CURRENCIES, WALLETS } from "../constants/constants";
-import { Currency, WalletOption } from "../types";
 import { CurrencyInput } from "./curency-input";
 import { SelectField } from "./select";
+import { Currency, WalletOption } from "@/types";
 
 interface ConversionFormProps {
   mode: "crypto-cash" | "cash-crypto";

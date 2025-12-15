@@ -24,13 +24,14 @@ A high-fidelity, interactive crypto-to-cash exchange widget built with **Next.js
 ```
 novacrust-task/
 ├── app/
-│   ├── components/      # UI Components (ConversionForm, CurrencyInput, etc.)
-│   ├── constants/       # Mock data and configuration constants
-│   ├── types/           # TypeScript interfaces and type definitions
-│   ├── globals.css      # Global styles and Tailwind directives
+    ├── globals.css      # Global styles and Tailwind directives
 │   ├── layout.tsx       # Root layout
 │   └── page.tsx         # Main page rendering the Widget
 ├── public/              # Static assets(images and fonts)
+├── components/      # UI Components (ConversionForm, CurrencyInput, etc.)
+├── constants/       # Mock data and configuration constants
+├── types/           # TypeScript interfaces and type definitions
+│
 ├── next.config.ts       # Next.js configuration
 ├── package.json         # Project dependencies
 ├── postcss.config.mjs   # PostCSS configuration
@@ -55,12 +56,12 @@ novacrust-task/
 1. **Exchange Logic**:
 
    - Conversion rates are mocked for demonstration (e.g., 1 ETH = 1,500,000 NGN).
-   - In a production environment, these would be fetched from a real-time price feed (e.g., CoinGecko API).
+   - In a production environment, these would be fetched from a real-time price feed.
 
 2. **Authentication & Wallets**:
 
    - The wallet selection is purely cosmetic.
-   - Real integration would involve libraries like `wagmi` or `viem` to connect actual Web3 wallets (MetaMask, WalletConnect).
+   - Basic form validation logic for required inputs.
 
 3. **Tech Stack**:
    - Built using Next.js App Router for modern React features.

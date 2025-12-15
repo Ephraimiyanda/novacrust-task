@@ -1,9 +1,9 @@
 "use client";
 
-import { TabType } from "./types";
-import { WidgetTabs } from "./components/widget-tabs";
-import { ComingSoon } from "./components/coming-soon";
-import { ConversionForm } from "./components/conversion-form";
+import { ComingSoon } from "@/components/coming-soon";
+import { ConversionForm } from "@/components/conversion-form";
+import { WidgetTabs } from "@/components/widget-tabs";
+import { TabType } from "@/types";
 import { useState } from "react";
 
 const App: React.FC = () => {

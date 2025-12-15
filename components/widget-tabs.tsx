@@ -1,5 +1,5 @@
 import React from "react";
-import { TabType } from "../types";
+import { TabType } from "@/types";
 
 interface WidgetTabsProps {
   activeTab: TabType;

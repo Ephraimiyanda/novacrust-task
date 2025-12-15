@@ -1,4 +1,4 @@
-import { Currency, WalletOption } from "../types";
+import { Currency, WalletOption } from "@/types";
 export const CURRENCIES: Currency[] = [
   {
     id: "ngn",
