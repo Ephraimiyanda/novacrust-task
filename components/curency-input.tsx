@@ -131,7 +131,7 @@ export const CurrencyInput = ({
                   ></Icon>
                   <div className="flex flex-col">
                     <span className="text-sm font-semibold text-gray-800 flex items-center gap-2 uppercase">
-                      {filteredCurrency.code}
+                      USDT-{filteredCurrency.code}
                     </span>
                   </div>
                 </button>
