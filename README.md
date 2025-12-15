@@ -1,49 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Novacrust Task - Crypto Exchange Widget
 
-## Getting Started
+A high-fidelity, interactive crypto-to-cash exchange widget built with **Next.js 15**, **React**, and **Tailwind CSS**.
 
-First, run the development server:
+## 🚀 Setup Instructions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+2. **Run Development Server**
+
+   ```bash
+   npm run dev
+   ```
+
+3. **Open Application**
+   Visit [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📂 Project Structure
+
+```
+novacrust-task/
+├── app/
+│   ├── components/      # UI Components (ConversionForm, CurrencyInput, etc.)
+│   ├── constants/       # Mock data and configuration constants
+│   ├── types/           # TypeScript interfaces and type definitions
+│   ├── globals.css      # Global styles and Tailwind directives
+│   ├── layout.tsx       # Root layout
+│   └── page.tsx         # Main page rendering the Widget
+├── public/              # Static assets(images and fonts)
+├── next.config.ts       # Next.js configuration
+├── package.json         # Project dependencies
+├── postcss.config.mjs   # PostCSS configuration
+├── tailwind.config.ts   # Tailwind configuration
+├── tsconfig.json        # TypeScript configuration
+└── README.md            # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Features
 
-## 🛠 Project Structure
-
-- **page.tsx**: main page for app.
-- **app/**: Main layout container for app.
-- **components/**: Reusable UI components (CurrencyInput, SelectField, etc.).
-- **types/**: TypeScript interfaces and types.
-- **constants/**: Mock data for currencies and wallets. -**public/**:contains images and fonts
+- **Dynamic Tab Switching**: Seamlessly toggle between "Crypto to Cash", "Cash to Crypto", and "Loan" views.
+- **Form Validation**: Ensures all fields (Amounts, Pay From, Pay To) are filled before submission.
+- **Interactive UI**:
+  - Custom currency selector with search.
+  - Wallet dropdowns with icons.
+  - Hover and active states for better UX.
+- **State Management**: Handles loading states and error feedback during conversion simulation.
+- **Responsive Design**: Optimized for various screen sizes using Tailwind CSS.
 
 ## 📝 Assumptions & Trade-offs
 
-1. **Exchange Rates**:
+1. **Exchange Logic**:
 
-   - The exchange rates are currently mocked and hardcoded in `ConversionForm.tsx`.
-   - `Crypto -> Fiat`: 1 ETH = 150,000 NGN
-   - `Fiat -> Crypto`: 1 NGN = 0.0000006 ETH
-   - In a production app, these would be fetched from an api.
+   - Conversion rates are mocked for demonstration (e.g., 1 ETH = 1,500,000 NGN).
+   - In a production environment, these would be fetched from a real-time price feed (e.g., CoinGecko API).
 
-2. **Wallet Connections**:
+2. **Authentication & Wallets**:
 
-   - The "Pay From" and "Pay To" fields are UI simulations.
+   - The wallet selection is purely cosmetic.
+   - Real integration would involve libraries like `wagmi` or `viem` to connect actual Web3 wallets (MetaMask, WalletConnect).
 
-3. **Validation**:
-
-   - Basic validation checks if the amount is > 0 and if wallets are selected or if required fields are filled.
-
-4. **Styling**:
-
-   - Tailwind CSS is loaded for performance.
-
-5. **Icons**:
-   - Custom SVG icons are used to match the design closely.
+3. **Tech Stack**:
+   - Built using Next.js App Router for modern React features.
+   - Tailwind CSS used for styling to match the provided Figma/screenshot design precisely.
